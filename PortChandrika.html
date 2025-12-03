@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sandipogu Chandrika | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Sandipogu Chandrika, Computer Science graduate skilled in Java, Python, Web Development, Salesforce, and AI/ML." />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --accent: #7b5cff;
+      --accent-soft: rgba(123, 92, 255, 0.15);
+      --accent-strong: #ff8bd1;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --chip-bg: #111827;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --card-bg: #020617;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 180ms ease-out;
+      --transition-med: 220ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1d2540 0, #020617 40%, #000 100%);
+      color: var(--text-main);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    @media (min-width: 768px) {
+      .page {
+        padding: 32px 20px 80px;
+      }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6));
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 12px;
+      z-index: 40;
+    }
+
+    @supports not (backdrop-filter: blur(16px)) {
+      header {
+        background: linear-gradient(135deg, #020617, #020617);
+      }
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 20% 0%, #ffffff 0, #7b5cff 38%, #020617 80%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 12px 30px rgba(123, 92, 255, 0.65);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    nav a:hover {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    .contact-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 0 50%, rgba(123, 92, 255, 0.4), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(129, 140, 248, 0.9);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.7);
+      cursor: pointer;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .contact-chip span {
+      font-size: 16px;
+    }
+
+    /* Hero */
+
+    .hero {
+      display: grid;
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+        align-items: center;
+      }
+    }
+
+    .hero-left {
+      position: relative;
+      padding: 24px 22px 24px;
+      border-radius: 24px;
+      background: radial-gradient(circle at top left, rgba(123, 92, 255, 0.3), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.25);
+    }
+
+    .role-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(248, 250, 252, 0.18);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4vw, 34px);
+      line-height: 1.15;
+      margin: 4px 0 10px;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #f9fafb, #e5e7eb, #c4b5fd, #f9a8d4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: #e5e7eb;
+      max-width: 32rem;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle span {
+      color: #c4b5fd;
+      font-weight: 500;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .meta-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #38bdf8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-med), border-color var(--transition-med);
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, #7b5cff, #a855f7, #ec4899);
+      border-color: rgba(248, 250, 252, 0.18);
+      color: #f9fafb;
+      box-shadow: 0 14px 38px rgba(79, 70, 229, 0.85);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(79, 70, 229, 0.9);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .hero-right {
+      position: relative;
+      padding: 20px 18px 18px;
+      border-radius: 24px;
+      background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.5), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(248, 250, 252, 0.08), transparent 55%),
+        radial-gradient(circle at 90% 10%, rgba(94, 234, 212, 0.16), transparent 60%);
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .stat-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+      z-index: 1;
+    }
+
+    .stat-card {
+      padding: 10px 10px 9px;
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .stat-sub {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .skill-cloud {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-chip {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #f97316;
+    }
+
+    .orbit-circle {
+      position: absolute;
+      inset: 14px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.4);
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    /* Sections */
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 17px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-pill {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 999px;
+      padding: 3px 8px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .section-caption {
+      font-size: 12px;
+      color: var(--text-soft);
+      max-width: 360px;
+    }
+
+    /* Timeline & cards */
+
+    .two-col {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .two-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.95));
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 12px;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(96, 165, 250, 0.16), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .card-meta {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-strong);
+    }
+
+    /* Skills */
+
+    .skills-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .skills-card {
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 10px 11px 9px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.85);
+    }
+
+    .skills-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skills-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+    }
+
+    /* Interests */
+
+    .interest-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interest-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      color: var(--text-soft);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: rgba(148, 163, 184, 0.8);
+    }
+
+    /* Anchor offset */
+    :target {
+      scroll-margin-top: 90px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Top bar -->
+    <header>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="logo-mark">SC</div>
+        <div class="brand-text">
+          <div class="brand-name">Sandipogu Chandrika</div>
+          <div class="brand-sub">Computer Science Graduate • Salesforce & Full‑Stack Enthusiast</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <button
+          class="contact-chip"
+          onclick="window.location.href='mailto:chandrikasandipogu814@gmail.com?subject=Opportunity%20for%20Sandipogu%20Chandrika'">
+          <span>●</span>
+          <span>Available for roles</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <div class="hero-left">
+        <div class="hero-badge-row">
+          <div class="pill">
+            <div class="pill-dot"></div>
+            <span>Actively seeking software / Salesforce roles</span>
+          </div>
+          <div class="role-tag">Graduate • 2025</div>
+        </div>
+
+        <h1 class="hero-title">
+          Building reliable software<br />
+          <span>from research to real users.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Motivated and detail‑oriented Computer Science graduate with strong foundations in programming,
+          algorithms, and software development, experienced with <span>Java, Python, web technologies, AI/ML,
+          and Salesforce</span>.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <div class="meta-dot"></div>
+            <span>Guntur, India</span>
+          </div>
+          <div class="meta-item">
+            <div class="meta-dot" style="background:#22c55e;"></div>
+            <span>Open to relocation and remote</span>
+          </div>
+          <div class="meta-item">
+            <div class="meta-dot" style="background:#a855f7;"></div>
+            <span>Graduating April 2025</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+            View highlighted projects →
+          </button>
+          <a class="btn-ghost" href="https://linkedin.com/in/s-chandrika-1ab900253" target="_blank" rel="noopener">
+            LinkedIn profile
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Recruiter note: Projects below demonstrate practical experience in
+          Scene Text Recognition, AI/ML, and a real‑world Salesforce CRM for real‑estate workflows.
+        </p>
+      </div>
+
+      <aside class="hero-right">
+        <div class="orbit-circle"></div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-label">Degree</div>
+            <div class="stat-value">B.Tech, CSE</div>
+            <div class="stat-sub">Vasireddy Venkatadri Institute of Technology</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">CGPA</div>
+            <div class="stat-value">7.81 / 10</div>
+            <div class="stat-sub">2021 – 2025</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Key domains</div>
+            <div class="stat-value">AI/ML & CRM</div>
+            <div class="stat-sub">Vision Transformers, Salesforce</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Contact</div>
+            <div class="stat-value">+91 70131 77292</div>
+            <div class="stat-sub">chandrikasandipogu814@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="skill-cloud">
+          <div class="skill-chip">
+            <span class="skill-dot"></span>
+            Java • Python • SQL
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#22c55e;"></span>
+            HTML • CSS • JavaScript • React
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#38bdf8;"></span>
+            Salesforce: Apex, LWC, API Integration
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#eab308;"></span>
+            AI & Machine Learning
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#f97316;"></span>
+            Data Analytics using Python (NPTEL Elite)
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#ec4899;"></span>
+            UiPath RPA • Teamwork • Adaptability
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <div class="section-title">
+          Featured projects
+          <span class="section-pill">What you can expect on the job</span>
+        </div>
+      </div>
+      <div class="two-col">
+        <!-- Scene Text Recognition -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Scene Text Recognition using Vision Transformers</h3>
+                <div class="card-meta">Dec 2024 – Apr 2025</div>
+              </div>
+              <span class="chip">AI / Computer Vision</span>
+            </div>
+            <p class="card-subtitle">
+              Research‑oriented project that recognizes text from complex, real‑world images using modern transformer architectures.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Vision Transformers</span>
+              <span class="chip">Transformer Decoders</span>
+              <span class="chip">Deep Learning</span>
+              <span class="chip">Python</span>
+            </div>
+            <ul class="bullet-list">
+              <li>Implemented a Scene Text Recognition system with Vision Transformers and Transformer Decoders, improving robustness to noise, background clutter, and varied fonts in real‑world scenarios.</li>
+              <li>Focused on applications such as document digitization, assistive tools, and real‑time text extraction, demonstrating deployment‑ready design thinking.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- CRM Application -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">CRM Application for Property Requirements</h3>
+                <div class="card-meta">Nov 2024 – Jan 2025 • Dreams World Properties</div>
+              </div>
+              <span class="chip">Salesforce CRM</span>
+            </div>
+            <p class="card-subtitle">
+              Salesforce‑based CRM tailored for real‑estate, streamlining client interactions and property‑centric workflows.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Salesforce Platform</span>
+              <span class="chip">Apex Triggers</span>
+              <span class="chip">Lightning Web Components</span>
+              <span class="chip">API Integration</span>
+            </div>
+            <ul class="bullet-list">
+              <li>Enhanced a CRM system to manage clients and their property‑related requirements, optimizing engagement and operational visibility for stakeholders.</li>
+              <li>Automated customer data capture and property recommendation flows, improving responsiveness and freeing time from manual data handling.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills & Certifications -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <div class="section-title">
+          Skills & certifications
+          <span class="section-pill">Tech stack at a glance</span>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skills-card">
+          <div class="skills-title">Core programming</div>
+          <div class="skills-tags">
+            <span class="skills-tag">Java</span>
+            <span class="skills-tag">Python</span>
+            <span class="skills-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <div class="skills-title">Web & frontend</div>
+          <div class="skills-tags">
+            <span class="skills-tag">HTML</span>
+            <span class="skills-tag">CSS</span>
+            <span class="skills-tag">JavaScript</span>
+            <span class="skills-tag">React</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <div class="skills-title">Salesforce platform</div>
+          <div class="skills-tags">
+            <span class="skills-tag">Apex Triggers</span>
+            <span class="skills-tag">Lightning Web Components</span>
+            <span class="skills-tag">API Integration</span>
+            <span class="skills-tag">Platform Development</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <div class="skills-title">AI, ML & data</div>
+          <div class="skills-tags">
+            <span class="skills-tag">AI & Machine Learning</span>
+            <span class="skills-tag">Data Analytics using Python (NPTEL Elite)</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <div class="skills-title">Automation & RPA</div>
+          <div class="skills-tags">
+            <span class="skills-tag">UiPath RPA Developer</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <div class="skills-title">Professional strengths</div>
+          <div class="skills-tags">
+            <span class="skills-tag">Teamwork & Collaboration</span>
+            <span class="skills-tag">Adaptability</span>
+            <span class="skills-tag">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="section-header">
+        <div class="section-title">
+          Education
+          <span class="section-pill">Academic foundation</span>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Vasireddy Venkatadri Institute of Technology</h3>
+                <div class="card-meta">Bachelor of Technology • Computer Science</div>
+              </div>
+              <span class="chip">7.81 CGPA</span>
+            </div>
+            <p class="card-subtitle">Nov 2021 – Apr 2025 • Guntur, India</p>
+            <ul class="bullet-list">
+              <li>Completed a strong curriculum in programming, algorithms, data structures, and software engineering practices.</li>
+              <li>Applied learning through hands‑on projects in AI/ML, computer vision, and software development.</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="two-col">
+          <article class="card">
+            <div class="card-inner">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Vincent Pallotti Junior College</h3>
+                  <div class="card-meta">Higher Secondary • 89%</div>
+                </div>
+              </div>
+              <p class="card-subtitle">2019 – 2021 • Guntur, India</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-inner">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Sri Chaitanya</h3>
+                  <div class="card-meta">Secondary • 98%</div>
+                </div>
+              </div>
+              <p class="card-subtitle">2018 – 2019 • Guntur, India</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section class="section" id="interests">
+      <div class="section-header">
+        <div class="section-title">
+          Beyond academics
+          <span class="section-pill">How I stay curious</span>
+        </div>
+      </div>
+      <div class="interest-row">
+        <span class="interest-pill">Conducting contests</span>
+        <span class="interest-pill">Participating in coding contests</span>
+        <span class="interest-pill">Reading books</span>
+        <span class="interest-pill">Drawing</span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>© 2025 Sandipogu Chandrika • Open to Software Engineer, Salesforce Developer, and related roles.</div>
+      <div class="footer-links">
+        <a href="mailto:chandrikasandipogu814@gmail.com">Email</a>
+        <a href="tel:+917013177292">Phone</a>
+        <a href="https://linkedin.com/in/s-chandrika-1ab900253" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Optional: smooth scrolling for older browsers
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
